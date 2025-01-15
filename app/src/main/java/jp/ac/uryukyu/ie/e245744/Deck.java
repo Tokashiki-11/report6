@@ -1,6 +1,7 @@
 package jp.ac.uryukyu.ie.e245744;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Deck {
@@ -16,6 +17,11 @@ public class Deck {
                 cards.add(new Card(suit, rank));
             }
         }
+        shuffle();
+    }
+
+    public void shuffle(){
+        Collections.shuffle(cards);
     }
 }
 
