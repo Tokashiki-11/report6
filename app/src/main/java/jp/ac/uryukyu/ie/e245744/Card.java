@@ -1,8 +1,8 @@
 package jp.ac.uryukyu.ie.e245744;
 
 public class Card {
-    private String suit;
-    private String rank;
+    private String suit; //トランプのマーク
+    private String rank; //トランプの数字
 
     public Card(String suit, String rank) {
         this.suit = suit;
