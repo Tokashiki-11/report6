@@ -1,8 +1,6 @@
 package jp.ac.uryukyu.ie.e245744;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Deck {
     private List<Card> cards;

@@ -1,7 +1,6 @@
 package jp.ac.uryukyu.ie.e245744;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Player {
     private String name;
@@ -15,7 +14,7 @@ public class Player {
     public List<Card> getHand() {
         return hand;
     }
-    
+
     public String getName() {
         return name;
     }
@@ -25,6 +24,14 @@ public class Player {
     }
 
     public void showHand() {
-        System.out.println(getName() + "'s hand: " + hand);
+        System.out.println(getName() + "の手札" + hand);
+        String handRank = HandEvaluator.evaluateHand(hand);
+        System.out.println("役: " + handRank); 
+    }
+
+    public void discardAndDraw(List<Integer> indices, Deck deck) {
+        for (int index : indices) {
+            hand.set(index, deck.draw());
+        }
     }
 }
