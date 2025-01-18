@@ -31,7 +31,11 @@ public class Player {
 
     public void discardAndDraw(List<Integer> indices, Deck deck) {
         for (int index : indices) {
-            hand.set(index, deck.draw());
+            if (index >= 0 && index < hand.size()) { 
+                hand.set(index, deck.draw());
+            }
         }
+        System.out.println(getName() + "は、カードを交換した。");
+        showHand();
     }
 }
