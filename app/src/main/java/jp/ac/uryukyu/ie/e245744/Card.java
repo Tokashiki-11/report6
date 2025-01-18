@@ -9,6 +9,14 @@ public class Card {
         this.rank = rank;
     }
 
+    public String getSuit() {
+        return suit;
+    }
+
+    public String getRank() {
+        return rank;
+    }
+
     @Override
     public String toString() {
         return suit + rank; //例:ハートの2は "♥️2"

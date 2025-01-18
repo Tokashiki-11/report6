@@ -4,10 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
+    private String name;
     private List<Card> hand;
 
-    public Player() {
+    public Player(String name) {
+        this.name = name;
         hand = new ArrayList<>();
+    }
+
+    public List<Card> getHand() {
+        return hand;
+    }
+    
+    public String getName() {
+        return name;
     }
 
     public void addCard(Card card) {
@@ -15,6 +25,6 @@ public class Player {
     }
 
     public void showHand() {
-        System.out.println("Hand: " + hand);
+        System.out.println(getName() + "'s hand: " + hand);
     }
 }
