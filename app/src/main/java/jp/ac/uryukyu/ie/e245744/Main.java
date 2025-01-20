@@ -17,8 +17,13 @@ public class Main {
        Deck deck = new Deck();
 
        // プレイヤーの作成
-       Player player1 = new Player("Taro");
-       Player player2 = new Player("Jiro");
+       System.out.println("プレイヤー1の名前を入力してください");
+        String name1 = scanner.nextLine();
+       Player player1 = new Player(name1);
+
+       System.out.println("プレイヤー2の名前を入力してください");
+       String name2 = scanner.nextLine();
+       Player player2 = new Player(name2);
 
        // 各プレイヤーに5枚のカードを配る
         for (int i = 0; i < 5; i++){
@@ -31,7 +36,7 @@ public class Main {
         player2.showHand();
 
         // player1のターン(カード交換)
-        System.out.println("Taroさんがカードを交換するターンです。");
+        System.out.println (name1 + "さんがカードを交換するターンです。");
         System.out.println("交換したいカードの番号を , 区切りで0~4で入力してください。交換しない場合はEnterを押してください。");
         String input1 = scanner.nextLine();
         if (!input1.isEmpty()) {
@@ -43,7 +48,7 @@ public class Main {
         }
 
         // player2のターン(カード交換)
-        System.out.println("Jiroさんがカードを交換するターンです。");
+        System.out.println(name2 + "さんがカードを交換するターンです。");
         System.out.println("交換したいカードの番号を , 区切りで0~4で入力してください。交換しない場合はEnterを押してください。");
         String input2 = scanner.nextLine();
         if (!input2.isEmpty()) {
