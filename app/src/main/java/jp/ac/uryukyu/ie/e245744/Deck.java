@@ -26,8 +26,7 @@ public class Deck {
         return cards.remove(0);
     }
 
-    // 残りのカード枚数を取得するメソッド
-    public int getRemainingCards() {
+    public int getRemainingCards() { // 残りのカード枚数を取得する
         return cards.size();
     }
 }
